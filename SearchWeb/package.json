@@ -1,0 +1,41 @@
+{
+  "name": "search-from-context-menu",
+  "publisher": "Phillip McPherson",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.searchWeb"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.searchWeb",
+        "title": "Search Web"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.searchWeb",
+          "when": "editorTextFocus"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -watch -p ./",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.8",
+    "typescript": "^4.4.0",
+    "vscode": "^1.1.37"
+  }
+}
