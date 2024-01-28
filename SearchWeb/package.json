@@ -1,6 +1,12 @@
 {
   "name": "search-from-context-menu",
-  "publisher": "Phillip McPherson",
+  "publisher": "phllpmcphrsn",
+  "displayName": "Context Menu Web Search",
+  "description": "Search the web for highlighted text using the context menu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phllpmcphrsn/vscode-extensions/tree/main/SearchWeb"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.60.0"
@@ -29,7 +35,7 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./"
   },
